@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">Week3_APP</string>
+    <string name="fragment_button1_name">IMG</string>
+    <string name="fragment_button2_name">MATH</string>
+    <string name="fragment_button3_name">ABOUT</string>
+    <string name="math_question">156和63的最大公倍數為何?</string>
+    <string name="button_name_math_ans">ans</string>
+    <string name="math_answer">3276</string>
+    <string name="about_name">製作者 : Vinson Chen</string>
+    <string name="about_email">問題回報 : Vinson_Chen@asus.com</string>
+</resources>
