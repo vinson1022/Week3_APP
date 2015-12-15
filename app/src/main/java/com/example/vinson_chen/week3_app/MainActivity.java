@@ -1,5 +1,6 @@
 package com.example.vinson_chen.week3_app;
 
+import android.annotation.SuppressLint;
 import android.app.Fragment;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -83,6 +84,7 @@ public class MainActivity extends AppCompatActivity {
         }
     }
 
+    @SuppressLint("ValidFragment")
     public class Fragment_Math extends Fragment implements View.OnClickListener {
 
         Button button_math_ans;
