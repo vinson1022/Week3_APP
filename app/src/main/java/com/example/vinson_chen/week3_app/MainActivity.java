@@ -2,13 +2,16 @@ package com.example.vinson_chen.week3_app;
 
 import android.annotation.SuppressLint;
 import android.app.Fragment;
+import android.content.res.Configuration;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -108,6 +111,23 @@ public class MainActivity extends AppCompatActivity {
         @Override
         public void onClick(View v) {
             textView_math.setText(R.string.math_answer);
+        }
+    }
+
+    @Override
+    public void onConfigurationChanged(Configuration newConfig) {
+        super.onConfigurationChanged(newConfig);
+        if (newConfig.orientation == Configuration.ORIENTATION_LANDSCAPE) {
+            Toast.makeText(this, "landscape", Toast.LENGTH_SHORT).show();
+            setContentView(R.layout.layout_activity_main_landscape);
+            setView();
+            setListener();
+
+        } else if (newConfig.orientation == Configuration.ORIENTATION_PORTRAIT){
+            Toast.makeText(this, "portrait", Toast.LENGTH_SHORT).show();
+            setContentView(R.layout.activity_main);
+            setView();
+            setListener();
         }
     }
 
